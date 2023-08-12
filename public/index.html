@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
-    <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="/" type="image/x-icon" />
   </head>
+  <style>
+    #list {
+      list-style: none;
+      padding: 0;
+    }
+    body {
+      background-color: teal;
+      margin-top: 5%;
+    }
+   
+    @media (max-width: 768px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      
+    }
+    
+  </style>
   <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <h1>TO DO LIST APP</h1>
+    <script type="module" src="dist/index.js"></script>
+    <form id="new-task-form">
+      <input
+        type="text"
+        id="new-task-title"
+        placeholder="Enter task title..."
+      />
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="task-list"></ul>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
